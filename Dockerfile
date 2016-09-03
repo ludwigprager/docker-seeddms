@@ -1,13 +1,11 @@
 FROM php:7.0-apache
-MAINTAINER lp <lp@ggw.immo>
-
+MAINTAINER Ludwig Prager <ludwig.prager@celp.de>
 
 RUN apt-get update
 
-RUN apt-get install -q -y libpng12-dev
-RUN docker-php-ext-install gd
+RUN apt-get install -q -y libpng12-dev imagemagick
 
-#RUN apt-get install -q -y vim less
+RUN docker-php-ext-install gd
 
 RUN apt-get install -q -y php-pear  php5-gd php5-sqlite poppler-utils catdoc
 
