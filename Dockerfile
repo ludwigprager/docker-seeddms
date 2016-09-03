@@ -13,6 +13,7 @@ ADD misc/seeddms-quickstart-5.0.5.tar.gz /var/www/
 
 RUN a2enmod rewrite
 
+COPY misc/php.ini /usr/local/etc/php/
 COPY misc/000-default.conf /etc/apache2/sites-available/
 
 COPY misc/settings.xml /var/www/seeddms50x/seeddms-5.0.5/conf/settings.xml
