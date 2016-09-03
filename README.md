@@ -5,7 +5,7 @@
 docker run -d -ti \
 	--name seeddms \
 	-p 8082:80 \
-	ludwigprager/seeddms:latest
+	ludwigprager/docker-seeddms:latest
 ~~~
 
 ## 2. basic setup
@@ -43,7 +43,7 @@ docker run -d -ti \
 	-p 8082:80 \
 	-v /dms/:/var/www/seeddms50x/ \
 	-e SYSTEM_TIMEZONE="Europe/Berlin" \
-	seeddms:1
+	ludwigprager/docker-seeddms:latest
 ~~~
 
 ### open shell inside running container
