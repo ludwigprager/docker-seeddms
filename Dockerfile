@@ -18,6 +18,6 @@ RUN a2enmod rewrite
 COPY misc/000-default.conf /etc/apache2/sites-available/
 
 COPY misc/settings.xml /var/www/seeddms50x/seeddms-5.0.5/conf/settings.xml
-chown -R www-data:www-data /var/www/seeddms50x/seeddms-5.0.5/
+RUN chown -R www-data:www-data /var/www/seeddms50x/seeddms-5.0.5/
 
 RUN touch /var/www/seeddms50x/seeddms-5.0.5/conf/ENABLE_INSTALL_TOOL
