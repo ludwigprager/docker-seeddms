@@ -13,9 +13,14 @@ Assuming docker host's address is 172.17.0.1, use the following URL for basic se
 
 `http://172.17.0.1:8082/install/`
 
+Navigate to 'Start installation', select 'Create database tables' and press 'Apply'.
 ## 3. remove the install-trigger
 ~~~
 docker exec -ti seeddms rm /var/www/seeddms50x/seeddms-5.0.5/conf/ENABLE_INSTALL_TOOL
+~~~
+and execute 
+~~~
+docker exec -ti seeddms chown -R www-data:www-data /var/www/
 ~~~
 SeedDMS is ready to use now.
 
